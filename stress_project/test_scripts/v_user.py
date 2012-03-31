@@ -7,7 +7,7 @@ class Transaction(object):
 
     listtocall = []
     def init (self):
-        self.listtocall=[sys.executable, './myTest.py']
+        self.listtocall=[sys.executable, './cliwmg.py']
         fileArg = 2
         if sys.argv[fileArg]:
             data = open(sys.argv[fileArg])
