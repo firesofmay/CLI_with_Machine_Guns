@@ -21,7 +21,7 @@ To use this script you'll need to install the following on a Ubuntu Based System
 How to Use it
 ---------------
 
-Let's fire up the cliwmg script. Note <RETURN> means hitting the Enter Key. and <TAB> Hiiting the Tab key.
+Let's fire up the cliwmg script. Note `<RETURN>` means hitting the Enter Key. and `<TAB>` Hiiting the Tab key.
 
     $ python cliwmg.py<RETURN>
 
