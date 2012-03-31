@@ -22,3 +22,12 @@ Can you see the links?
 * [Google Link](http://www.google.com) 
 * [Yahoo Link](http://www.yahoo.com) 
 
+Contributing
+------------
+Fork the repository.  Then, run:
+
+    git clone --recursive git@github.com:<username>/gitflow.git
+    cd gitflow
+    git branch master origin/master
+    git flow init -d
+    git flow feature start <your feature>
