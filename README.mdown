@@ -2,10 +2,10 @@ Command Line Interpreter with Machine Guns :D
 ========
 
 Fancy Name so not inspired from [Bees With machine Guns](https://github.com/newsapps/beeswithmachineguns) ;). 
+
 This is a tool to write Performance/Stress Testing Python scripts which will run off the [Multi-Mechanize](http://testutils.org/multi-mechanize/). 
+
 The cool thing about this tool is that you surf the website and you write your test scripts on the fly via the Command line interpreter using python library [cmd2](http://packages.python.org/cmd2/) library which is an extension to the python [cmd](http://www.doughellmann.com/PyMOTW/cmd/) library.
-
-
 
 
 Setup
@@ -17,17 +17,139 @@ To use this script you'll need to install the following on a Ubuntu Based System
     $ sudo apt-get install python-matplotlib
     $ sudo pip install -U multi-mechanize
 
-Can you see the links?
 
-* [Google Link](http://www.google.com) 
-* [Yahoo Link](http://www.yahoo.com) 
+How to Use it
+---------------
 
-Contributing
-------------
-Fork the repository.  Then, run:
+Let's fire up the cliwmg script. Note <RETURN> means hitting the Enter Key. and <TAB> Hiiting the Tab key.
 
-    git clone --recursive git@github.com:<username>/gitflow.git
-    cd gitflow
-    git branch master origin/master
-    git flow init -d
-    git flow feature start <your feature>
+    $ python cliwmg.py<RETURN>
+
+    >>>
+
+Now you are inside the CLI. It behaves very similar to the standard bash shell. Try pressing Tab Twice.
+    
+    >>> <TAB><TAB>
+    EOF               cmdenvironment    eof               l                 pause             run               shortcuts
+    _load             controls_set      exit              li                py                save              show
+    _relative_load    controls_show     help              list              q                 select_form       start
+    back              ed                hi                load              quit              set               
+    click             edit              history           open_current_url  r                 shell             
+    >>> 
+
+It shows you all the commands that you can excute. Some of them are inbuilt to the cmd2 module while some are commands specific to this script.
+
+Let's start with the start command.
+      
+    >>> start<RETURN>
+    Taking Default URL : https://dev2.learningu.org/
+
+    Page Title : ESP
+
+start command initializes your mechanize module with the url given. if no url is given it takes a default url https://dev2.learningu.org/ otherwise you can specifiy it as a paramater like start http://www.example.com 
+
+It shows you the Page Title after opening that URL inside of mechanize. Which you can check is ESP for the default URL.
+
+Now lets Try registring yourself as a user. We have a command called as click. Oh by the way you don't need to type the whole command just type cl<TAB> and it'll finish it for you. Give a space and press TAB again to see what are the Links you can click on. It shows you the Text Label of the links available on that page.
+
+    >>> cl<TAB>
+    >>> click <TAB>
+    Administration_pages                               For_Teachers
+    Click_here                                         For_Volunteers
+    Cnn.com                                            Login_Help
+    ESP                                                Logout
+    Edit_Announcement/Links                            Manage_Programs
+    Edit_Navigation_Categories                         More_Information
+    Edit_Navigation_Links                              On-Site_Registration
+    Edit_News                                          Register
+    For_Students                                       Unmorph_to_document.write(esp_user.cur_retTitle);
+
+We wanted to Sign up right? So lets click on Register. Oh wait. Who wants to type the whole word, Just type r (yeah it'll take care of the case senstivity too).
+ 
+    >>> click r<TAB> 
+    >>> click Register<RETURN>
+
+    URL : /myesp/register
+
+    Text : Register
+
+    https://dev2.learningu.org//myesp/register
+
+    Page Title : Create a new user account
+
+Great we are inside the User Creation Page. :) Why you no believe me? Okay fine. You check it yourself. So we have a command called as open_current_url.
+Lets check its docstring by doing a help on it.
+
+    >>> help open_current_url<RETURN>
+    Stores the current URL's data in to the current directory of the script and saves it as debug.html.
+    Opens it in your default browser for debugging. >>>> open_current_url
+
+Okay Cool. Every Command has its own docstring you can check for help.
+
+    >>> open_current_url<RETURN>
+
+It should have opened the current Registration page in your default browser. You can see we are indeed inside the Sign Up Page.
+
+Okay close it and come back to the console.
+
+We want to fill the form, so lets see what all forms do we have?
+
+    >>> sel<TAB>
+    >>> select_form <TAB>
+    loginform     newuser_form  
+    >>> select_form n<TAB><RETURN>
+    Form Selected : newuser_form
+   
+Okay great. The form is selected. Lets see what all Parameters it has.
+
+    >>> co<TAB>
+    >>> controls_sh<TAB>
+    >>> controls_show<RETURN>
+    first_name
+    last_name
+    username
+    password
+    confirm_password
+    initial_role
+    email
+    submit
+
+Okay. So how do we fill of that? Well we have a command that Automatically generates random credentials for text, password and email type values. For drop down values it selects it based on random values as of now.
+
+    >>> controls_set
+    <TextControl(first_name=Test9e2e2QBA7KAFB22Y)>
+    <TextControl(last_name=Test9e2e2MT8DKT24TVW)>
+    <TextControl(username=Test9e2e2K73IFEQIDAQ)>
+    <PasswordControl(password=Test23e2e26GA2BQG0111)>
+    <PasswordControl(confirm_password=Test23e2e26GA2BQG0111)>
+    <SelectControl(initial_role=[, *Student, Teacher, Guardian, Educator, Volunteer])>
+    <TextControl(email=Test9e2e27QRS3U8SYH4@test.com)>
+    <SubmitControl(submit=Create account, proceed to profile creation) (readonly)>
+    <TextControl(csrfmiddlewaretoken=ef111e8084275638c91bc62d5c6b1111)>
+    Submitted
+    Title of the Current Page : Profile Editor
+
+
+Note how the values were Generated and submitted automatically for you. :) Okay so lets sign out. How? Well we "Click" on it! ;)
+
+    >>> cl<TAB>
+    >>> click <TAB>
+    >>> click logo<TAB>
+    >>> click logout<RETURN>
+    URL : /myesp/signout/
+
+    Text : Logout
+
+    https://dev2.learningu.org//myesp/signout/
+
+    Page Title : Goodbye
+
+And lets quit the program. :)
+
+    >>> quit
+    You are awesome! Cya Soon!
+
+
+Good Job :)
+
+    
