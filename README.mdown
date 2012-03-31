@@ -46,7 +46,7 @@ Let's start with the start command.
 
     Page Title : ESP
 
-start command initializes your mechanize module with the url given. if no url is given it takes a default url https://dev2.learningu.org/ otherwise you can specifiy it as a paramater like `start http://www.example.com`
+start command initializes your mechanize module with the url given. if no url is given it takes a default url https://dev2.learningu.org/ otherwise you can specifiy it as a paramater like `>>> start http://www.example.com`
 
 It shows you the Page Title after opening that URL inside of mechanize. Which you can check is ESP for the default URL.
 
@@ -82,7 +82,7 @@ Lets check its docstring by doing a help on it.
 
     >>> help open_current_url<RETURN>
     Stores the current URL's data in to the current directory of the script and saves it as debug.html.
-    Opens it in your default browser for debugging. >>>> open_current_url
+    Opens it in your default browser for debugging. `>>> open_current_url`
 
 Okay Cool. Every Command has its own docstring you can check for help.
 
@@ -114,7 +114,7 @@ Okay great. The form is selected. Lets see what all Parameters it has.
     email
     submit
 
-Okay. So how do we fill of that? Well we have a command that Automatically generates random credentials for text, password and email type values. For drop down values it selects it based on random values as of now.
+Okay. So how do we fill it up? Well we have a command that Automatically generates random credentials for text, password and email type values. For drop down values it selects it based on random values as of now.
 
     >>> controls_set
     <TextControl(first_name=Test9e2e2QBA7KAFB22Y)>
