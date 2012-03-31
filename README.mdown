@@ -21,7 +21,7 @@ To use this script you'll need to install the following on a Ubuntu Based System
 How to Use it
 ---------------
 
-Let's fire up the cliwmg script. Note `<RETURN>` means hitting the Enter Key. and `<TAB>` Hiiting the Tab key.
+Let's fire up the cliwmg script. Note `<RETURN>` means hitting the Enter Key. and `<TAB>`means hitting the Tab key.
 
     $ python cliwmg.py<RETURN>
 
@@ -46,7 +46,7 @@ Let's start with the start command.
 
     Page Title : ESP
 
-start command initializes your mechanize module with the url given. if no url is given it takes a default url https://dev2.learningu.org/ otherwise you can specifiy it as a paramater like start http://www.example.com 
+start command initializes your mechanize module with the url given. if no url is given it takes a default url https://dev2.learningu.org/ otherwise you can specifiy it as a paramater like `start http://www.example.com`
 
 It shows you the Page Title after opening that URL inside of mechanize. Which you can check is ESP for the default URL.
 
