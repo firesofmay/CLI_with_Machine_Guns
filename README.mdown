@@ -1,4 +1,4 @@
- Line Interpreter with Machine Guns :D
+Command Line Interpreter with Machine Guns :D
 ========
 
 Fancy Name **definitely** not inspired from [Bees With machine Guns](https://github.com/newsapps/beeswithmachineguns) ;). 
