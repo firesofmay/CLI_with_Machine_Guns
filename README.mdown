@@ -1,7 +1,7 @@
-Command Line Interpreter with Machine Guns :D
+ Line Interpreter with Machine Guns :D
 ========
 
-Fancy Name so not inspired from [Bees With machine Guns](https://github.com/newsapps/beeswithmachineguns) ;). 
+Fancy Name *definitely* not inspired from [Bees With machine Guns](https://github.com/newsapps/beeswithmachineguns) ;). 
 
 This is a tool to write Performance/Stress Testing Python scripts which will run off the [Multi-Mechanize](http://testutils.org/multi-mechanize/). 
 
