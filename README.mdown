@@ -22,6 +22,10 @@ To use this script you'll need to install the following on a Ubuntu Based System
 How to Use it
 ---------------
 
+First clone the repo if you haven't already
+
+    $ git clone git@github.com:firesofmay/CLI_with_Machine_Guns.git
+
 Let's fire up the cliwmg script. Note `<RETURN>` means hitting the Enter Key. and `<TAB>`means hitting the Tab key.
 
     $ python stress_project/test_scripts/cliwmg.py<RETURN>
