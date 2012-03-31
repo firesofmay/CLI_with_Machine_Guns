@@ -12,10 +12,10 @@ Setup
 ---------------
 To use this script you'll need to install the following on a Ubuntu Based System. Note the script was tested on Ubuntu 11.10 64 bit System.
 
-   $ sudo apt-get install python-pip
-   $ sudo pip install mechanize
-   $ sudo apt-get install python-matplotlib
-   $ sudo pip install -U multi-mechanize
+    $ sudo apt-get install python-pip
+    $ sudo pip install mechanize
+    $ sudo apt-get install python-matplotlib
+    $ sudo pip install -U multi-mechanize
 
 Can you see the links?
 
