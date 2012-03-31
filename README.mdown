@@ -1,23 +1,24 @@
-Testing 1 2 3
+Command Line Interpreter with Machine Guns :D
 ========
-Testing it here
+
+Fancy Name so not inspired from [Bees With machine Guns](https://github.com/newsapps/beeswithmachineguns) ;). 
+This is a tool to write Performance/Stress Testing Python scripts which will run off the [Multi-Mechanize](http://testutils.org/multi-mechanize/). 
+The cool thing about this tool is that you surf the website and you write your test scripts on the fly via the Command line interpreter using python library [cmd2](http://packages.python.org/cmd2/) library which is an extension to the python [cmd](http://www.doughellmann.com/PyMOTW/cmd/) library.
 
 
-Getting started
+
+
+Setup
 ---------------
-Does this look different -> `git flow` ??
+To use this script you'll need to install the following on a Ubuntu Based System. Note the script was tested on Ubuntu 11.10 64 bit System.
 
+   $ sudo apt-get install python-pip
+   $ sudo pip install mechanize
+   $ sudo apt-get install python-matplotlib
+   $ sudo pip install -U multi-mechanize
 
 Can you see the links?
 
 * [Google Link](http://www.google.com) 
 * [Yahoo Link](http://www.yahoo.com) 
 
-
-Running it
-------------
-
-	$ python myTest.py
-	$ start
-
-    

@@ -1,5 +1,8 @@
+#To install Modules
 import cmd2
 import mechanize
+
+#Inbuilt Modules
 import re
 import webbrowser
 import hashlib
