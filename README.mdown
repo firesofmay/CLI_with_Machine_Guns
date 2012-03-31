@@ -7,6 +7,7 @@ This is a tool to write Performance/Stress Testing Python scripts which will run
 
 The cool thing about this tool is that you surf the website and you write your test scripts on the fly via the Command line interpreter using python library [cmd2](http://packages.python.org/cmd2/) library which is an extension to the python [cmd](http://www.doughellmann.com/PyMOTW/cmd/) library.
 
+This is part of the GSoC 2012 Application for the Learning Unlimited Organization. 
 
 Setup
 ---------------
@@ -144,7 +145,7 @@ Note how the values were Generated and submitted automatically for you. :) Okay 
 
     Page Title : Goodbye
 
-To save all the commands you just executed exactly in the order we execute the `>>> save * democommands.txt` command. Do a help on save to see more on this inbuilt command.
+To save all the commands you just executed exactly in the order, we execute the `>>> save * democommands.txt` command. Do a help on save to see more on this inbuilt command.
 
     >>> save * democommands.txt
 
@@ -153,6 +154,8 @@ Oh did I tell you you can all the bash commands inside of this CLI using a `!` ?
     >>> !ls
    
 Above will behave just like the ls command.
+
+So lets see what we have inside the command.txt which I created using the CLI as a demo for testing. :)
 
     >>> !cat command.txt
     start
@@ -165,7 +168,7 @@ Above will behave just like the ls command.
 
     click Logout
 
-    save * >>> 
+    save * command.txt >>> 
 
 
 And lets quit the program. :)
@@ -176,13 +179,14 @@ And lets quit the program. :)
 
 Good Job :)
 
-Okay so how do we use that command.txt and feed it to the CLI and do some stress testing using Multi-Mechanize?
+Okay so how do we use that command.txt and feed it to the CLI and do some stress/load testing using Multi-Mechanize? 
+
+Simple :-
 
     $ multimech-run  stress_project/ command.txt<RETURN>
 
 Woahh So much of output :)
-It should be doing parallel registrations i.e. parallely many threads should be running and doing sign up and log out and quiting the program. Once its done. you should see
-something like
+It should be doing parallel registrations i.e. parallely many threads should be running and doing sign up and loging out and quiting the program. Once its done. you should see something like :-
 
     analyzing results...
 
@@ -199,7 +203,7 @@ something like
 
     done.
 
-Inside the stress_project/results folder you should see new folders with  timestamps of the reports being made. Check for the results.html file and you can see the report being generated. It's not very useful as of now, but hey its just a few days old project :)
+Inside the stress_project/results folder you should see new folders with timestamps of the reports being made. Check for the results.html file and you can see the report being generated. It's not very useful as of now, but hey its just a few days old project :)
 
 Wait for it to be more awesome! :)
 
