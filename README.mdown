@@ -23,7 +23,7 @@ How to Use it
 
 Let's fire up the cliwmg script. Note `<RETURN>` means hitting the Enter Key. and `<TAB>`means hitting the Tab key.
 
-    $ python cliwmg.py<RETURN>
+    $ python stress_project/test_scripts/cliwmg.py<RETURN>
 
     >>>
 
@@ -82,7 +82,7 @@ Lets check its docstring by doing a help on it.
 
     >>> help open_current_url<RETURN>
     Stores the current URL's data in to the current directory of the script and saves it as debug.html.
-    Opens it in your default browser for debugging. `>>> open_current_url`
+    Opens it in your default browser for debugging. >>> open_current_url
 
 Okay Cool. Every Command has its own docstring you can check for help.
 
@@ -144,6 +144,30 @@ Note how the values were Generated and submitted automatically for you. :) Okay 
 
     Page Title : Goodbye
 
+To save all the commands you just executed exactly in the order we execute the `>>> save * democommands.txt` command. Do a help on save to see more on this inbuilt command.
+
+    >>> save * democommands.txt
+
+Oh did I tell you you can all the bash commands inside of this CLI using a `!` ? 
+
+    >>> !ls
+   
+Above will behave just like the ls command.
+
+    >>> !cat command.txt
+    start
+
+    click Register
+
+    select_form newuser_form
+
+    controls_set
+
+    click Logout
+
+    save * >>> 
+
+
 And lets quit the program. :)
 
     >>> quit
@@ -152,4 +176,35 @@ And lets quit the program. :)
 
 Good Job :)
 
-    
+Okay so how do we use that command.txt and feed it to the CLI and do some stress testing using Multi-Mechanize?
+
+    $ multimech-run  stress_project/ command.txt<RETURN>
+
+Woahh So much of output :)
+It should be doing parallel registrations i.e. parallely many threads should be running and doing sign up and log out and quiting the program. Once its done. you should see
+something like
+
+    analyzing results...
+
+    transactions: 18
+    errors: 0
+
+    test start: 2012-03-31 18:18:38
+    test finish: 2012-03-31 18:18:49
+
+    created: ./stress_project//results/results_2012.03.31_18.18.28/results.html
+
+    created: ./stress_project//results/results_2012.03.31_18.18.28/results.jtl
+    created: last_results.jtl
+
+    done.
+
+Inside the stress_project/results folder you should see new folders with  timestamps of the reports being made. Check for the results.html file and you can see the report being generated. It's not very useful as of now, but hey its just a few days old project :)
+
+Wait for it to be more awesome! :)
+
+Cheers.
+
+
+
+
