@@ -14,6 +14,7 @@ Setup
 To use this script you'll need to install the following on a Ubuntu Based System. Note the script was tested on Ubuntu 11.10 64 bit System.
 
     $ sudo apt-get install python-pip
+    $ sudo pip install cmd2
     $ sudo pip install mechanize
     $ sudo apt-get install python-matplotlib
     $ sudo pip install -U multi-mechanize
@@ -30,7 +31,7 @@ First clone the repo if you haven't already
 
 Let's fire up the cliwmg script. Note `<RETURN>` means hitting the Enter Key. and `<TAB>`means hitting the Tab key.
 
-    $ python stress_project/test_scripts/cliwmg.py<RETURN>
+    $ python cliwmg.py<RETURN>
 
     >>>
 
