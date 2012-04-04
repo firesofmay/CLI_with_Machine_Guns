@@ -8,4 +8,4 @@ controls_set
 
 click Logout
 
-save * 
+save * command.txt

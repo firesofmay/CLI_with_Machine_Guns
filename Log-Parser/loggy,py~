@@ -1,0 +1,8 @@
+import re
+log = open('/media/New Volume/work/GSoC2012/stanford_last_100k_filt.log')
+
+for line in log.readlines()[:1]:
+    print line
+    match = re.findall('\((\d*.\d*.\d*.\d*)\).*\[(.*)\] "([^"]*)', line)
+
+match
