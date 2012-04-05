@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Create a new user account</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" lang="en-us" xml:lang="en-us" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+
+    
+    <script type="text/javascript" src="/media/scripts/dwcode.js"> </script>
+
+    <script type="text/javascript" src="/media/scripts/yui/yahoo/yahoo-min.js"></script>
+    <script type="text/javascript" src="/media/scripts/yui/yahoo-dom-event/yahoo-dom-event.js"></script>
+    <script type="text/javascript" src="/media/scripts/yui/dom/dom-min.js"></script>
+    <script type="text/javascript" src="/media/scripts/yui/connection/connection-min.js"></script>
+    <script type="text/javascript" src="/media/scripts/yui/animation/animation-min.js"></script>
+    <script type="text/javascript" src="/media/scripts/yui/autocomplete/autocomplete-min.js"></script>
+    <script type="text/javascript" src="/media/scripts/yui/logger/logger-min.js"></script>
+    <script type="text/javascript" src="/media/scripts/yui/dragdrop/dragdrop-debug.js"></script>
+    <script type="text/javascript" src="/media/scripts/yui/container/container-min.js"></script>
+
+    <script type="text/javascript" src="/media/scripts/crashkit-javascript.js"> </script>
+
+    <script type="text/javascript" src="/media/scripts/ddlist.js"></script>
+
+    <script type="text/javascript" src="/media/scripts/jquery.js"> </script>
+    <script type="text/javascript" src="/media/scripts/jquery.cookie.js"> </script>
+
+    <script language="JavaScript">
+    $j = $.noConflict();
+    </script>
+    
+    <script type="text/javascript" src="/media/scripts/content/user_data.js"></script>
+    <script type="text/javascript" src="/media/scripts/content/user_classes.js"></script>
+    <script type="text/javascript" src="/media/scripts/csrf_init.js"></script>
+
+    <!-- Internet Explorer refuses to load media content over HTTP by default
+        when the page has been loaded over HTTPS.  This is a security policy.
+        However, Dojo has HTTP references hard-coded in a few places.  This
+        script below provides a workaround until we stop using Dojo.   -->
+    <script type="text/javascript">
+    djConfig = {
+        modulePaths: {
+            "dojo": "https://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dojo",
+            "dijit": "https://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dijit",
+            "dojox": "https://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dojox"
+        },
+        parseOnLoad: true
+    };
+    </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dojo/dojo.xd.js"></script>
+
+    <script language="JavaScript">
+    $j(document).ready(function() {
+        update_user_classes();
+    });
+    </script>
+
+
+    
+    <script type="text/javascript" src="/media/scripts/match_heights.js"></script>
+    <script type="text/javascript">
+    <!--
+    match_content = function () {
+        match_heights(['main', 'navbar']);
+    };
+    $j(document).ready(match_content);
+    -->
+    </script>
+
+    
+
+
+
+
+    
+<link rel="stylesheet" type="text/css" href="/media/styles/user_visibility.css" media="all" />
+<style type="text/css">
+        @import "https://ajax.googleapis.com/ajax/libs/dojo/1.5/dijit/themes/tundra/tundra.css";
+</style>
+
+    
+    <link rel="stylesheet" href="/media/styles/main.css" type="text/css" />
+
+    <link rel="stylesheet" type="text/css" href="/media/styles/forms.css" />
+
+
+
+
+</head>
+<body class="tundra" onload="MM_preloadImages( )">
+
+
+
+<style type="text/css">
+body {
+  background: #FFFFFF;
+}
+</style>
+
+<div id="content">
+<div id="topleft">
+<br /><br /><br /><br />
+<center><a href="/">ESP</a></center>
+</div>
+
+<div id="title_bar">
+    Title image or text here
+</div>
+
+<div id="nav_buttons">
+    <a class="navbutton" href="/learn/index.html">For Students</a>
+    <a class="navbutton" href="/teach/index.html">For Teachers</a>
+    <a class="navbutton" href="/volunteer/index.html">For Volunteers</a>
+    <a class="navbutton" href="/more_info/index.html">More Information</a>
+</div>
+
+
+<div id="navbar_header">News and Links</div>
+
+
+<div id="main_header">
+
+    <!-- CSS2 doesn't allow vertical alignment without a table.  So, give it a table. -->
+    <table width="600px" height="30px"><tr><td valign="middle">Welcome to ESP</td></tr></table>
+
+</div>
+
+
+<div id="navbar">
+    <div id="navbar_content">
+    <span class="announcementlink_title">Relevant Links</span>
+    
+    <!-- secondary nav -->
+<ul id="submenu">
+
+
+</ul>
+
+
+
+    </div>
+
+    <div id="navbar_content">
+
+    
+    
+    
+
+    <!-- more announcements -->
+    
+    </div>
+    
+    <div id="navbar_content">
+    <br />
+    <link rel="stylesheet" type="text/css" href="/media/styles/forms.css" />
+
+<!-- login -->
+<div id="loginbox" >
+<table align="center" class="loginform" cellspacing="0" cellpadding="5">
+<tr><td>
+
+
+    <div class="not_logged_in not_logged_in_hidden">
+        <div class="navbar">Please log in to access program registration<br /></div>
+    </div>
+
+
+<div class="logged_in logged_in_hidden">
+<div id="divnav">
+  <p align="center">
+    <div id="loginbox_user_name"></div>
+    <div class="admin admin_hidden">
+        <a href="/admin/">Administration pages</a> <br />
+        <a href="/manage/programs/">Manage Programs</a> <br />
+    </div>
+    <div class="unmorph unmorph_hidden">
+        <br /><a href="/myesp/switchback/">Unmorph to <script language="JavaScript">document.write(esp_user.cur_retTitle);</script></a><br /><div id="unmorph_text"></div>
+    </div>
+    <a href="/myesp/signout/">Logout</a>
+  </p>
+</div>
+</div>
+
+<div class="not_logged_in not_logged_in_hidden">
+<div id="divnav">
+  <form name="loginform" id="loginform" method="post" action="/myesp/login/">
+    <input type="hidden" name="next" value="/myesp/register" />
+    <table border="0" cellpadding="0" cellspacing="0" summary=" ">
+      <tr>
+        <td><div class="divformcol1"><label for="user">User name:</label></div></td>
+        <td><div class="divformcol2"><input type="text" id="id_username" name="username" id="user" size="8" value="" maxlength="255" class="inputbox" /></div></td>
+
+        <td><div class="divformcol3">&nbsp;</div></td>
+      </tr>
+      <tr>
+        <td><div class="divformcol1"><label for="pass">Password:</label></div></td>
+        <td><div class="divformcol2"><input type="password" id="id_password" name="password" id="pass" size="8" value="" maxlength="255" class="inputbox" /></div></td>
+        <td><div class="divformcol3"><input type="image" name="gologin" id="gologin" src="/media/images/go.gif" class="gobutton" alt="Go" title=""/></div></td>
+      </tr>
+      <tr>
+
+        <td colspan="3"><div class="divformcol1"><a href="/myesp/loginhelp.html">Login Help</a>
+        <span style="padding-left: 25px;">
+        <a href="/myesp/register">Register</a></span></div></td>
+      </tr>
+    </table>
+  </form>
+</div>
+</div>
+
+</td></tr>
+</table>
+</div>
+
+
+    <br />
+
+    <div class="admin admin_hidden">
+        <a href="/admin/miniblog/entry/">Edit News</a> <br />
+        <a href="/admin/miniblog/announcementlink/">Edit Announcement/Links</a> <br />
+        <a href="/admin/web/navbarentry/">Edit Navigation Links</a> <br />
+        <a href="/admin/web/navbarcategory/">Edit Navigation Categories</a>
+    </div>
+
+    </div>
+</div>
+
+
+<div id="main">
+    <div id="main_content">
+    
+
+<h1>Create a new account</h1>
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/media/styles/qsd.css" />
+<script type="text/javascript" src="/media/scripts/json2.js"></script>
+<script type="text/javascript" src="/media/scripts/qsd.js"></script>
+
+
+    <div class="qsd_bits qsd_bits_hidden">
+        <div class="qsd_header qsd_bits qsd_bits_hidden" onclick="qsd_inline_edit(None);">This is quasi-static content.  Click here to edit the text; click outside the box to save changes.</div>
+        <div class="qsd_edit_hidden qsd_bits qsd_bits_hidden" id="inline_edit_None">
+		    <textarea rows="8" cols="80" id="qsd_content_None" onblur="qsd_inline_upload(None);" name="qsd_content" class="qsd_editor qsd_bits qsd_bits_hidden">
+		        
+<p>
+  Welcome to ESP! To do almost anything with ESP, you first need to register
+an account with us. After you register account, you will be allowed to register
+for programs, sign up for classes, among other things.
+</p>
+<p>
+  If you just want to receive e-mail announcements about our programs, you can register for our <a href="/cgi-bin/mailman/listinfo/announcements">main</a> or <a href="/cgi-bin/mailman/listinfo/announcements-local">local-only</a> announcements lists. (The latter gets emails about longer term ESP programs, targeted at people in the Boston area, while the former gets emails about programs that might be worth travelling for.) If you create an account, you will be automatically subscribed to our main Announcements list.
+</p>
+
+		    </textarea>
+        </div>
+    </div>
+    <div class="qsd_view_visible" id="inline_qsd_None">
+        <p>
+  Welcome to ESP! To do almost anything with ESP, you first need to register
+an account with us. After you register account, you will be allowed to register
+for programs, sign up for classes, among other things.
+</p>
+<p>
+  If you just want to receive e-mail announcements about our programs, you can register for our <a href="/cgi-bin/mailman/listinfo/announcements">main</a> or <a href="/cgi-bin/mailman/listinfo/announcements-local">local-only</a> announcements lists. (The latter gets emails about longer term ESP programs, targeted at people in the Boston area, while the former gets emails about programs that might be worth travelling for.) If you create an account, you will be automatically subscribed to our main Announcements list.
+</p>
+    </div>
+
+    <script language="JavaScript">
+    $j(document).ready(function() {
+      if (esp_user.cur_admin != "1") {
+        $j(".qsd_view_visible").removeClass("qsd_view_visible");
+      }
+    });
+    </script>
+
+<br />
+
+
+
+<div id="program_form">
+<form action="/myesp/register" method="post" name="newuser_form">
+<table>
+<thead>
+<tr>
+  <th colspan="2">
+    User Account Creation Form
+  </th>
+</tr>
+</thead>
+<tbody>
+
+
+<tr><th><label for="id_first_name">First name:</label></th><td><input id="id_first_name" size="None" type="text" name="first_name" maxlength="30" /></td></tr>
+<tr><th><label for="id_last_name">Last name:</label></th><td><input id="id_last_name" size="None" type="text" name="last_name" maxlength="30" /></td></tr>
+<tr><th><label for="id_username">Username:</label></th><td><input id="id_username" type="text" name="username" maxlength="30" /></td></tr>
+<tr><th><label for="id_password">Password:</label></th><td><input type="password" name="password" id="id_password" /></td></tr>
+<tr><th><label for="id_confirm_password">Confirm password:</label></th><td><input type="password" name="confirm_password" id="id_confirm_password" /></td></tr>
+<tr><th><label for="id_initial_role">Initial role:</label></th><td><select name="initial_role" id="id_initial_role">
+<option value="" selected="selected">Pick one...</option>
+<option value="Student">Student (up through 12th grade)</option>
+<option value="Teacher">Volunteer Teacher</option>
+<option value="Guardian">Guardian of Student</option>
+<option value="Educator">K-12 Educator</option>
+<option value="Volunteer">On-site Volunteer</option>
+</select></td></tr>
+<tr><th><label for="id_email">Email:</label></th><td><input id="id_email" type="text" name="email" maxlength="75" /><br /><span class="helptext"><i>Please provide an email address that you check regularly.</i></span></td></tr>
+
+<tr>
+  <th colspan="2" class="submit">
+    <input type="submit" value="Create account, proceed to profile creation" name="submit" />
+  </th>
+</tr>
+</tbody>
+</table>
+</form>
+</div>
+
+<script type="text/javascript">
+<!--
+  document.getElementById('id_first_name').focus();
+//-->
+</script>
+
+
+    </div>
+</div>
+
+</div>
+
+<div id="footer">
+Your footer here
+</div>
+
+
+
+
+
+</body>
+</html>

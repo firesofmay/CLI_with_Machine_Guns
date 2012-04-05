@@ -1,5 +1,7 @@
 *.py[co]
 
+stress_project/results/
+
 # Packages
 *.egg
 *.egg-info

@@ -1,0 +1,11 @@
+start
+
+click Register
+
+select_form newuser_form
+
+controls_set
+
+click Logout
+
+save * command.txt
