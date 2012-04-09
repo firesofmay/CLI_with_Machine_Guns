@@ -1,0 +1,6 @@
+This module is pretty awesome
+http://gitorious.org/apache-log-parser-module/
+http://blog.copyninja.info/2010/06/small-python-module-to-parse-apache-log.html
+
+This is the standard way of how apache logs are made
+http://httpd.apache.org/docs/2.1/logs.html
