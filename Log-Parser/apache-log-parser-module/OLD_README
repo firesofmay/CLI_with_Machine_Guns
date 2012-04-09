@@ -1,0 +1,42 @@
+This module can parse lines of Apache Access Log or Error log and provide you with infromation as object of class ApacheAccessLogParser or ApacheErrorLogParser.
+
+The log format should be in the format as mentioned in this document http://httpd.apache.org/docs/2.1/logs.html
+
+
+Below is description of each class
+    ApacheAccessLogParser
+        |
+        |
+        |- ip_address
+        |- client_identity
+        |- user_id
+        |- date
+        |- request
+        |- response
+        |- response_size
+        |- referer
+        |- user_agent
+        
+These are the standard fields that can be found in Access Log of apache which is either in common or combined format. This class can handle both common and combined format without any issues.
+
+   ApacheErrorLogParser
+        |
+        |
+        |- date
+        |- type
+        |- description
+        |- client_ip
+        
+These are the field which I felt can be easily extracted from the error log line. Basically some time only 3 fields can be accessed but if description contains string client then ip address will be associated with it, in that case client_ip will contain that ip address else it will be None
+
+Usage:
+import apachelogparser as a
+
+alog = a.ApacheAccessLogParser()
+f = open("/var/www/log/apache2/access.log") # change this to suit the location of access log in your machine
+aline = f.readline()
+alog.parse(line)
+
+Now the alog object contains the infromation from the line variable. Similarly you can parse the error log file.
+
+P.S : This module is not intelligent enough to validate and detect lines which are not from access / error log. So its users duty to pass proper log lines to this module. I may add validation error handling in future, since I created this for my personal use I didn't feel like adding it ;).
